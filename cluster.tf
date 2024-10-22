@@ -28,9 +28,7 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
 
 resource "local_file" "demo_values" {
   content  = templatefile("${path.module}/values.tftpl", { 
-    small_slice_count = var.small_slice_count, 
-    large_slice_count = var.large_slice_count, 
-    max_requests      = var.max_requests 
+
     })
   filename = "${path.module}/helmchart/secureaks-demo-helmchart/values.yaml"
 }
