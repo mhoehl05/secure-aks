@@ -27,9 +27,9 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
 }
 
 resource "local_file" "demo_values" {
-  content  = templatefile("${path.module}/values.tftpl", { 
+  content = templatefile("${path.module}/values.tftpl", {
 
-    })
+  })
   filename = "${path.module}/helmchart/secureaks-demo-helmchart/values.yaml"
 }
 
