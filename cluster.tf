@@ -35,7 +35,7 @@ resource "local_file" "demo_values" {
 
 resource "helm_release" "demo" {
   name             = "secureaks-demo-helmchart"
-  chart            = "./helmchart/ollama-demo-helmchart"
+  chart            = "./helmchart/secureaks-demo-helmchart"
   namespace        = "secureaks"
   create_namespace = true
   wait             = true
